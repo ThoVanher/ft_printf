@@ -50,6 +50,7 @@ void						finish_to_fill_lst(const char *str, t_arg **begin);
 void						get_type_and_stars(const char *str, int *i,
 							t_arg **begin);
 int							is_flag(char c);
+int							is_integer(char c);
 void						convert_mfw_precision(const char *str,
 							t_arg *arg, int i, int j);
 void						get_mfw_precision(const char *str, t_arg *arg,
@@ -86,5 +87,5 @@ int							mfw_if_point2(const char *str, t_arg *arg, int i);
 void						*ft_memset(void *b, int c, size_t len);
 void						*ft_memcpy(void *dst, const void *src, size_t n);
 char						*ft_strdup(char *src);
-int							ft_strncmp(const char *s1, const char *s2, size_t n);
+int							ft_strncmp(const char *s, const char *s2, size_t n);
 #endif

@@ -47,7 +47,6 @@ int		exit_display(char *res, t_arg *begin, t_arg *actual)
 		free_lst(begin);
 		return (1);
 	}
-
 	return (0);
 }
 
@@ -69,7 +68,7 @@ int		display_str(const char *str, t_arg *begin)
 			res = get_arg(actual);
 			ft_putstr_fd(res, 1);
 			if (actual->type == 'c' && exit_display(res, begin, actual))
-					return (0);
+				return (0);
 			free(res);
 			actual = actual->next;
 		}
@@ -77,13 +76,6 @@ int		display_str(const char *str, t_arg *begin)
 			ft_putchar_fd(str[i++], 1);
 	}
 	free_lst(begin);
-	return (0);
-}
-
-int		is_integer(char c)
-{
-	if (c == 'd' || c == 'i' || c == 'c' || c == 'u' || c == 'x' || c == 'X')
-		return (1);
 	return (0);
 }
 
